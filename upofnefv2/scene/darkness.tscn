@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bne8bsjls2l4c"]
+
+[ext_resource type="Script" uid="uid://ceom7u6n6b7px" path="res://scripts/darkness.gd" id="1_4pswi"]
+[ext_resource type="Texture2D" uid="uid://bkkvhecvubvqx" path="res://assets/sprites/darkness.png" id="1_r3mm5"]
+
+[node name="Darkness" type="Node2D" unique_id=1821260977]
+z_index = 6
+script = ExtResource("1_4pswi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1366070263]
+scale = Vector2(100, 100)
+texture = ExtResource("1_r3mm5")

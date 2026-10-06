@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://brchdtkl01brm"]
+
+[ext_resource type="PackedScene" uid="uid://doeoedqaxrw35" path="res://scene/button.tscn" id="1_5kiuu"]
+[ext_resource type="Script" uid="uid://dnrj6ymv6dyu0" path="res://scripts/game.gd" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://bnxp4tt6pw4db" path="res://scene/background.tscn" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://bne8bsjls2l4c" path="res://scene/darkness.tscn" id="4_xwcet"]
+[ext_resource type="PackedScene" uid="uid://bmycwuwm0qd47" path="res://scene/pc_screen.tscn" id="5_p1ry8"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_dbls1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Button" parent="." instance=ExtResource("1_5kiuu")]
+offset_left = -69.0
+offset_top = -99.0
+offset_right = -29.0
+offset_bottom = -39.0
+
+[node name="Button2" parent="." instance=ExtResource("1_5kiuu")]
+offset_left = 29.0
+offset_top = -99.0
+offset_right = 69.0
+offset_bottom = -39.0
+
+[node name="Button3" parent="." instance=ExtResource("1_5kiuu")]
+offset_top = -99.0
+offset_bottom = -39.0
+
+[node name="background" parent="." instance=ExtResource("3_33cqm")]
+z_index = -1
+
+[node name="Darkness" parent="." instance=ExtResource("4_xwcet")]
+visible = false
+
+[node name="PCScreen" parent="." instance=ExtResource("5_p1ry8")]
+visible = false

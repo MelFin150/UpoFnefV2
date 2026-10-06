@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmbspebiy2gh7"]
+
+[ext_resource type="Script" uid="uid://1l5g7kc6q6pw" path="res://scripts/autoload.gd" id="1_jc3sa"]
+[ext_resource type="AudioStream" uid="uid://b7n6l3gbuqhuj" path="res://assets/sounds/powerSwitchSFX.mp3" id="2_bwvcq"]
+[ext_resource type="AudioStream" uid="uid://b8yj4b2ny6yai" path="res://assets/sounds/powerOutageSFX.mp3" id="3_u1wby"]
+[ext_resource type="AudioStream" uid="uid://ceouuybcq7lm5" path="res://assets/sounds/8bitCameraSFX.mp3" id="4_u1wby"]
+[ext_resource type="AudioStream" uid="uid://fad50n4s0edy" path="res://assets/sounds/robotWalking.mp3" id="5_ycefo"]
+
+[node name="Autoload" type="Node" unique_id=2089026958]
+script = ExtResource("1_jc3sa")
+
+[node name="powerSwitchSFX" type="AudioStreamPlayer2D" parent="." unique_id=1871004167]
+stream = ExtResource("2_bwvcq")
+
+[node name="powerOutageSFX" type="AudioStreamPlayer2D" parent="." unique_id=761905072]
+stream = ExtResource("3_u1wby")
+
+[node name="PCSFX" type="AudioStreamPlayer2D" parent="." unique_id=1080680876]
+stream = ExtResource("4_u1wby")
+
+[node name="robotWalkingSFX" type="AudioStreamPlayer2D" parent="." unique_id=1321860653]
+stream = ExtResource("5_ycefo")
+volume_db = -10.4
+attenuation = 2.5491176
+bus = &"Echo"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnxp4tt6pw4db"]
+
+[ext_resource type="Texture2D" uid="uid://xkq7l0cr1wk5" path="res://assets/sprites/biuro.png" id="1_jirmm"]
+[ext_resource type="Script" uid="uid://du18mn67vl7e3" path="res://scripts/pc_button.gd" id="2_xpwal"]
+
+[node name="Background" type="Node2D"]
+
+[node name="PCButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_left = -40.0
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 60.0
+focus_mode = 0
+script = ExtResource("2_xpwal")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, 0)
+scale = Vector2(10, 10)
+texture = ExtResource("1_jirmm")
+
+[connection signal="pressed" from="PCButton" to="PCButton" method="_on_pressed"]
