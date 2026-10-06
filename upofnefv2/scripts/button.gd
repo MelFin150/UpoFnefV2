@@ -26,3 +26,10 @@ func _process(delta): # to leci cały czas
 	else:
 		disabled = false
 		visible = true
+		
+	if !Autoload.gameOn:
+		disabled = true
+		visible = false
+	else:
+		disabled = false
+		visible = true

@@ -15,12 +15,18 @@ var roomConections = {
 	6: []
 }
 
+signal doJumpscare()
+
 @onready var power_switch_sfx: AudioStreamPlayer2D = $powerSwitchSFX
 @onready var power_outage_sfx: AudioStreamPlayer2D = $powerOutageSFX
 @onready var pc_sfx: AudioStreamPlayer2D = $PCSFX
 @onready var robot_walking_sfx: AudioStreamPlayer2D = $robotWalkingSFX
+@onready var robot_jumpscare_sfx: AudioStreamPlayer2D = $robotJumpscareSFX
 
 
+
+func _ready():
+	doJumpscare.connect(jumpscare)
 
 func shutThePower(): # a tak żeby co jakiś czas korki wydupcyły
 	Autoload.shuttingThePower = true
@@ -41,5 +47,13 @@ func robotMovementLoop():
 
 func robotMove():
 	robotPos = roomConections[robotPos].pick_random()
-	robot_walking_sfx.play()
+	if robotPos != 6:
+		robot_walking_sfx.play()
+	else:
+		doJumpscare.emit()
 	print("Robot moved to:", Autoload.robotPos)
+
+func jumpscare():
+	$"/root/Game/robot/robotJumpscare".visible = true
+	robot_jumpscare_sfx.play()
+	

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnxp4tt6pw4db" path="res://scene/background.tscn" id="3_33cqm"]
 [ext_resource type="PackedScene" uid="uid://bne8bsjls2l4c" path="res://scene/darkness.tscn" id="4_xwcet"]
 [ext_resource type="PackedScene" uid="uid://bmycwuwm0qd47" path="res://scene/pc_screen.tscn" id="5_p1ry8"]
+[ext_resource type="PackedScene" uid="uid://dbtn8d8hqnbdg" path="res://scene/robot.tscn" id="6_xlg7c"]
 
 [node name="Game" type="Node2D" unique_id=306653997]
 script = ExtResource("1_dbls1")
@@ -38,3 +39,5 @@ offset_bottom = -39.0
 [node name="Button3" parent="powerButtons" unique_id=1534334668 instance=ExtResource("1_5kiuu")]
 offset_top = -99.0
 offset_bottom = -39.0
+
+[node name="robot" parent="." unique_id=524249147 instance=ExtResource("6_xlg7c")]

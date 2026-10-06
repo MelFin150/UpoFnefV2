@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://b8yj4b2ny6yai" path="res://assets/sounds/powerOutageSFX.mp3" id="3_u1wby"]
 [ext_resource type="AudioStream" uid="uid://ceouuybcq7lm5" path="res://assets/sounds/8bitCameraSFX.mp3" id="4_u1wby"]
 [ext_resource type="AudioStream" uid="uid://fad50n4s0edy" path="res://assets/sounds/robotWalking.mp3" id="5_ycefo"]
+[ext_resource type="AudioStream" uid="uid://cr2nta574g1p5" path="res://assets/sounds/robotJumpscareSFX.mp3" id="6_7kjq4"]
 
 [node name="Autoload" type="Node" unique_id=2089026958]
 script = ExtResource("1_jc3sa")
@@ -23,3 +24,7 @@ stream = ExtResource("5_ycefo")
 volume_db = -10.4
 attenuation = 2.5491176
 bus = &"Echo"
+
+[node name="robotJumpscareSFX" type="AudioStreamPlayer2D" parent="." unique_id=61807988]
+stream = ExtResource("6_7kjq4")
+volume_db = 24.0
