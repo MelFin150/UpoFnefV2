@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtvl6ya1vb3fc" path="res://assets/sprites/returnButton.png" id="2_i5tin"]
 [ext_resource type="Script" uid="uid://c1uey74ll3vf8" path="res://scripts/PCReturnButton.gd" id="3_l3r5w"]
 [ext_resource type="Script" uid="uid://n570mcqpyh6o" path="res://scripts/soundLure.gd" id="5_8g1tq"]
-[ext_resource type="Texture2D" uid="uid://yv2eatmqb3mj" path="res://assets/sprites/soundLure.png" id="5_034n6"]
+[ext_resource type="Texture2D" uid="uid://yv2eatmqb3mj" path="res://assets/sprites/soundLureSpritesheet.png" id="5_034n6"]
 [ext_resource type="Script" uid="uid://bea5b46qm1ury" path="res://scripts/roomButtons/room1Button.gd" id="7_2oy2w"]
 [ext_resource type="Script" uid="uid://tep6htgw07x3" path="res://scripts/roomButtons/room2Button.gd" id="8_j06a8"]
 [ext_resource type="Script" uid="uid://ddy3f0cyfu7bg" path="res://scripts/roomButtons/room3Button.gd" id="9_vnmux"]

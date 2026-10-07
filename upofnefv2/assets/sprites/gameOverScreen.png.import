@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8n2iqkkdfa03"
-path="res://.godot/imported/robotJumpscareSpritesheet.png-1975892c5befb6d37dfb6c827f09bc44.ctex"
+uid="uid://brdi2xi42koia"
+path="res://.godot/imported/gameOverScreen.png-cc07790490a9233281c333a81fe61389.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/robotJumpscareSpritesheet.png"
-dest_files=["res://.godot/imported/robotJumpscareSpritesheet.png-1975892c5befb6d37dfb6c827f09bc44.ctex"]
+source_file="res://assets/sprites/gameOverScreen.png"
+dest_files=["res://.godot/imported/gameOverScreen.png-cc07790490a9233281c333a81fe61389.ctex"]
 
 [params]
 

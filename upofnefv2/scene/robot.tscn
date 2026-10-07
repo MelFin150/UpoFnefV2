@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbtn8d8hqnbdg"]
 
-[ext_resource type="Texture2D" uid="uid://b8n2iqkkdfa03" path="res://assets/sprites/robotJumpscareSpritesheet.png" id="1_6lib3"]
+[ext_resource type="Texture2D" uid="uid://b8n2iqkkdfa03" path="res://assets/sprites/robotJumpscare.png" id="1_6lib3"]
 [ext_resource type="Script" uid="uid://5r1ehr3gyjqa" path="res://scripts/robotJumpscare.gd" id="2_4sm6e"]
 
 [node name="robot" type="Node2D" unique_id=524249147]
