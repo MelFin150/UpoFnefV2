@@ -5,7 +5,7 @@ var basePosition: Vector2
 
 func _ready():
 	basePosition = position
-	visible = false
+	$"/root/Game/Robot".visible = false
 
 func _process(delta: float) -> void:
 	position = basePosition + Vector2(

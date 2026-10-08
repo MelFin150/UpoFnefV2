@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtvl6ya1vb3fc" path="res://assets/sprites/returnButton.png" id="2_i5tin"]
 [ext_resource type="Script" uid="uid://c1uey74ll3vf8" path="res://scripts/PCReturnButton.gd" id="3_l3r5w"]
 [ext_resource type="Script" uid="uid://n570mcqpyh6o" path="res://scripts/soundLure.gd" id="5_8g1tq"]
-[ext_resource type="Texture2D" uid="uid://yv2eatmqb3mj" path="res://assets/sprites/soundLureSpritesheet.png" id="5_034n6"]
+[ext_resource type="Texture2D" uid="uid://yv2eatmqb3mj" path="res://assets/sprites/soundLure.png" id="5_034n6"]
 [ext_resource type="Script" uid="uid://bea5b46qm1ury" path="res://scripts/roomButtons/room1Button.gd" id="7_2oy2w"]
 [ext_resource type="Script" uid="uid://tep6htgw07x3" path="res://scripts/roomButtons/room2Button.gd" id="8_j06a8"]
 [ext_resource type="Script" uid="uid://ddy3f0cyfu7bg" path="res://scripts/roomButtons/room3Button.gd" id="9_vnmux"]
@@ -56,20 +56,20 @@ position = Vector2(59.999992, 20.000002)
 scale = Vector2(10, 10)
 texture = ExtResource("2_i5tin")
 
-[node name="soundLure" type="Node2D" parent="." unique_id=582625741]
+[node name="SoundLure" type="Node2D" parent="." unique_id=582625741]
 visible = false
 script = ExtResource("5_8g1tq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="soundLure" unique_id=931473434]
+[node name="SoundLure" type="AnimatedSprite2D" parent="SoundLure" unique_id=931473434]
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_y6cob")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.38796133
 
-[node name="rooms" type="Node2D" parent="." unique_id=1457293674]
+[node name="Rooms" type="Node2D" parent="." unique_id=1457293674]
 
-[node name="room1Button" type="Button" parent="rooms" unique_id=914595201]
+[node name="room1Button" type="Button" parent="Rooms" unique_id=914595201]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = 90.0
@@ -79,7 +79,7 @@ offset_bottom = 20.0
 focus_mode = 0
 script = ExtResource("7_2oy2w")
 
-[node name="room2Button" type="Button" parent="rooms" unique_id=1664547583]
+[node name="room2Button" type="Button" parent="Rooms" unique_id=1664547583]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = 10.0
@@ -89,7 +89,7 @@ offset_bottom = -40.0
 focus_mode = 0
 script = ExtResource("8_j06a8")
 
-[node name="room3Button" type="Button" parent="rooms" unique_id=1174018723]
+[node name="room3Button" type="Button" parent="Rooms" unique_id=1174018723]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = 10.0
@@ -99,7 +99,7 @@ offset_bottom = 20.0
 focus_mode = 0
 script = ExtResource("9_vnmux")
 
-[node name="room4Button" type="Button" parent="rooms" unique_id=1320718610]
+[node name="room4Button" type="Button" parent="Rooms" unique_id=1320718610]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = 10.0
@@ -109,7 +109,7 @@ offset_bottom = 80.0
 focus_mode = 0
 script = ExtResource("10_vnmux")
 
-[node name="room5Button" type="Button" parent="rooms" unique_id=251267276]
+[node name="room5Button" type="Button" parent="Rooms" unique_id=251267276]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 offset_left = -80.0
@@ -119,8 +119,8 @@ focus_mode = 0
 script = ExtResource("11_h67gb")
 
 [connection signal="mouse_entered" from="PCReturnButton" to="PCReturnButton" method="_on_mouse_entered"]
-[connection signal="pressed" from="rooms/room1Button" to="rooms/room1Button" method="_on_pressed"]
-[connection signal="pressed" from="rooms/room2Button" to="rooms/room2Button" method="_on_pressed"]
-[connection signal="pressed" from="rooms/room3Button" to="rooms/room3Button" method="_on_pressed"]
-[connection signal="pressed" from="rooms/room4Button" to="rooms/room4Button" method="_on_pressed"]
-[connection signal="pressed" from="rooms/room5Button" to="rooms/room5Button" method="_on_pressed"]
+[connection signal="pressed" from="Rooms/room1Button" to="Rooms/room1Button" method="_on_pressed"]
+[connection signal="pressed" from="Rooms/room2Button" to="Rooms/room2Button" method="_on_pressed"]
+[connection signal="pressed" from="Rooms/room3Button" to="Rooms/room3Button" method="_on_pressed"]
+[connection signal="pressed" from="Rooms/room4Button" to="Rooms/room4Button" method="_on_pressed"]
+[connection signal="pressed" from="Rooms/room5Button" to="Rooms/room5Button" method="_on_pressed"]

@@ -4,11 +4,11 @@ var soundLureOn = false
 
 func _ready():
 	visible = false
-	$"/root/Game/PCScreen/rooms/room1Button".roomClicked.connect(goToMouse)
-	$"/root/Game/PCScreen/rooms/room2Button".roomClicked.connect(goToMouse)
-	$"/root/Game/PCScreen/rooms/room3Button".roomClicked.connect(goToMouse)
-	$"/root/Game/PCScreen/rooms/room4Button".roomClicked.connect(goToMouse)
-	$"/root/Game/PCScreen/rooms/room5Button".roomClicked.connect(goToMouse)
+	$"/root/Game/PCScreen/Rooms/room1Button".roomClicked.connect(goToMouse)
+	$"/root/Game/PCScreen/Rooms/room2Button".roomClicked.connect(goToMouse)
+	$"/root/Game/PCScreen/Rooms/room3Button".roomClicked.connect(goToMouse)
+	$"/root/Game/PCScreen/Rooms/room4Button".roomClicked.connect(goToMouse)
+	$"/root/Game/PCScreen/Rooms/room5Button".roomClicked.connect(goToMouse)
 
 func goToMouse(room):
 	if !soundLureOn:

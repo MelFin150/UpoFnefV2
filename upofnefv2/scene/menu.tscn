@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://covx8ykuixe4e"]
+
+[ext_resource type="Script" uid="uid://be6ccuainwtmy" path="res://scripts/menu.gd" id="1_bo06a"]
+[ext_resource type="Texture2D" uid="uid://byqnkgkyarmov" path="res://assets/sprites/menuBackground.png" id="1_e5g8k"]
+[ext_resource type="Script" uid="uid://co021t8r8v4y7" path="res://scripts/playButton.gd" id="2_8hxod"]
+[ext_resource type="Texture2D" uid="uid://dfwcw7ksw1bkx" path="res://assets/sprites/playButton.png" id="4_15se8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hxod"]
+atlas = ExtResource("1_e5g8k")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo06a"]
+atlas = ExtResource("1_e5g8k")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejmsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hxod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo06a")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs5te"]
+atlas = ExtResource("4_15se8")
+region = Rect2(0, 0, 14, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi6sp"]
+atlas = ExtResource("4_15se8")
+region = Rect2(0, 9, 14, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bo06a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs5te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi6sp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Node2D" unique_id=721821130]
+scale = Vector2(5, 5)
+script = ExtResource("1_bo06a")
+
+[node name="MenuSprite" type="AnimatedSprite2D" parent="." unique_id=180335219]
+sprite_frames = SubResource("SpriteFrames_ejmsa")
+
+[node name="PlayButton" type="Button" parent="." unique_id=334859314]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 5.0
+offset_top = -4.0
+offset_right = 19.0
+offset_bottom = 4.999999
+focus_mode = 0
+script = ExtResource("2_8hxod")
+
+[node name="PlayButtonSprite" type="AnimatedSprite2D" parent="PlayButton" unique_id=234675029]
+position = Vector2(7, 4.5)
+sprite_frames = SubResource("SpriteFrames_bo06a")
+
+[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]

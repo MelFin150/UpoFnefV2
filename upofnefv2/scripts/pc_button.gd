@@ -5,7 +5,10 @@ func _on_pressed() -> void:
 	Autoload.pc_sfx.play()
 
 func _process(delta: float) -> void:
-	if Autoload.isPCActive:
-		disabled = true
+	if Autoload.gameOn:
+		if Autoload.isPCActive:
+			disabled = true
+		else:
+			disabled = false
 	else:
-		disabled = false
+		disabled = true

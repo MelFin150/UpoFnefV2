@@ -6,5 +6,5 @@ func _process(delta: float) -> void:
 	else:
 		visible = false
 	
-	if !Autoload.power:
+	if !Autoload.power || !Autoload.gameOn:
 		Autoload.isPCActive = false

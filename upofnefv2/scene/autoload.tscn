@@ -21,7 +21,7 @@ stream = ExtResource("4_u1wby")
 
 [node name="robotWalkingSFX" type="AudioStreamPlayer2D" parent="." unique_id=1321860653]
 stream = ExtResource("5_ycefo")
-volume_db = -10.4
+volume_db = -36.4
 attenuation = 2.5491176
 bus = &"Echo"
 

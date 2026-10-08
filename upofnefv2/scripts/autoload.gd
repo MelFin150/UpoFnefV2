@@ -6,6 +6,7 @@ var isPCActive = false
 var robotPos = 1
 var gameOn = false
 var isRobotMad = false
+var difficulty = 2 #ranges from 0 to 2
 var roomConections = {
 	1: [3],
 	2: [3],
@@ -17,6 +18,7 @@ var roomConections = {
 
 signal doJumpscare()
 signal gameOverSignal()
+signal startGame()
 
 @onready var power_switch_sfx: AudioStreamPlayer2D = $powerSwitchSFX
 @onready var power_outage_sfx: AudioStreamPlayer2D = $powerOutageSFX
@@ -32,7 +34,7 @@ func _ready():
 	
 func shutThePower(): # a tak żeby co jakiś czas korki wydupcyły
 	Autoload.shuttingThePower = true
-	var time = randi_range(5.0, 12.0)
+	var time = randi_range(5.0 - difficulty, 10.0 - difficulty)
 	await get_tree().create_timer(time).timeout
 	if power and gameOn:
 		power_outage_sfx.play()
@@ -42,7 +44,7 @@ func shutThePower(): # a tak żeby co jakiś czas korki wydupcyły
 func robotMovementLoop():
 	while gameOn and robotPos != 6:
 		if !isRobotMad:
-			await get_tree().create_timer(randi_range(4, 10)).timeout
+			await get_tree().create_timer(randi_range(3, 8 - difficulty)).timeout
 		else:
 			await get_tree().create_timer(1).timeout
 		robotMove()
@@ -56,11 +58,11 @@ func robotMove():
 	print("Robot moved to:", Autoload.robotPos)
 
 func jumpscare():
-	$"/root/Game/robot/robotJumpscare".visible = true
+	$"/root/Game/Robot".visible = true
 	robot_jumpscare_sfx.play()
 	await robot_jumpscare_sfx.finished
 	gameOverSignal.emit()
-	$"/root/Game/robot/robotJumpscare".visible = false
+	$"/root/Game/Robot".visible = false
 	
 	
 func restart():
