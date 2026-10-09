@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://ddy3f0cyfu7bg" path="res://scripts/roomButtons/room3Button.gd" id="9_vnmux"]
 [ext_resource type="Script" uid="uid://doocfu3x7sxem" path="res://scripts/roomButtons/room4Button.gd" id="10_vnmux"]
 [ext_resource type="Script" uid="uid://dnb2rdcph166l" path="res://scripts/roomButtons/room5Button.gd" id="11_h67gb"]
+[ext_resource type="Texture2D" uid="uid://5xifla755mru" path="res://assets/sprites/clock.png" id="12_8y2yf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_au2cv"]
 atlas = ExtResource("5_034n6")
@@ -32,6 +33,70 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vne8j"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(0, 0, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foqbf"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(0, 7, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wp3w"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(0, 14, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhqx4"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(0, 21, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oak4"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(13, 0, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l403f"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(13, 7, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krgj6"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(13, 14, 13, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qc2b6"]
+atlas = ExtResource("12_8y2yf")
+region = Rect2(13, 21, 13, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejmsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vne8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foqbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wp3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhqx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oak4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l403f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krgj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qc2b6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="PCScreen" type="Node2D" unique_id=1974091047]
@@ -117,6 +182,11 @@ offset_top = -30.0
 offset_bottom = 20.0
 focus_mode = 0
 script = ExtResource("11_h67gb")
+
+[node name="Clock" type="AnimatedSprite2D" parent="." unique_id=1942689749]
+position = Vector2(102.99999, -122.99999)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ejmsa")
 
 [connection signal="mouse_entered" from="PCReturnButton" to="PCReturnButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="Rooms/room1Button" to="Rooms/room1Button" method="_on_pressed"]

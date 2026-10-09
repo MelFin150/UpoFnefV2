@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://covx8ykuixe4e" path="res://scene/menu.tscn" id="7_yq8tf"]
 [ext_resource type="Script" uid="uid://44ialx6sj4bs" path="res://scripts/restartButton.gd" id="8_17rxn"]
 [ext_resource type="Texture2D" uid="uid://fcd4dvikmepw" path="res://assets/sprites/restartButton.png" id="9_yq8tf"]
+[ext_resource type="Texture2D" uid="uid://dgxphlk0glqlk" path="res://assets/sprites/youWonScreen.png" id="11_ym5sv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ym5sv"]
 atlas = ExtResource("9_yq8tf")
@@ -89,6 +90,12 @@ sprite_frames = SubResource("SpriteFrames_ejmsa")
 
 [node name="Menu" parent="." unique_id=721821130 instance=ExtResource("7_yq8tf")]
 position = Vector2(-1.7881395e-07, -5.9604645e-08)
+
+[node name="YouWonScreen" type="Sprite2D" parent="." unique_id=924706059]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 16
+scale = Vector2(10, 10)
+texture = ExtResource("11_ym5sv")
 
 [connection signal="mouse_entered" from="gameOverScreen/restartButton" to="gameOverScreen/restartButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="gameOverScreen/restartButton" to="gameOverScreen/restartButton" method="_on_mouse_exited"]

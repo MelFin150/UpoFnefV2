@@ -24,10 +24,11 @@ func goToMouse(room):
 func soundLuring(roomLured):
 	if roomLured in Autoload.roomConections[Autoload.robotPos]:
 		Autoload.robotPos = roomLured
-		print("Robot moved to:", Autoload.robotPos)
+		#print("Robot moved to:", Autoload.robotPos)
 		Autoload.robot_walking_sfx.play()
 	elif roomLured == Autoload.robotPos:
 		Autoload.isRobotMad = true
-		print("Robot is mad.")
+		#print("Robot is mad.")
 	else:
-		print("Room with lure is not connected to the robot position.")
+		#print("Room with lure is not connected to the robot position.")
+		pass

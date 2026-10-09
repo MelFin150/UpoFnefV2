@@ -4,8 +4,9 @@
 [ext_resource type="AudioStream" uid="uid://b7n6l3gbuqhuj" path="res://assets/sounds/powerSwitchSFX.mp3" id="2_bwvcq"]
 [ext_resource type="AudioStream" uid="uid://b8yj4b2ny6yai" path="res://assets/sounds/powerOutageSFX.mp3" id="3_u1wby"]
 [ext_resource type="AudioStream" uid="uid://ceouuybcq7lm5" path="res://assets/sounds/8bitCameraSFX.mp3" id="4_u1wby"]
-[ext_resource type="AudioStream" uid="uid://fad50n4s0edy" path="res://assets/sounds/robotWalking.mp3" id="5_ycefo"]
+[ext_resource type="AudioStream" uid="uid://fad50n4s0edy" path="res://assets/sounds/robotWalkingSFX.mp3" id="5_ycefo"]
 [ext_resource type="AudioStream" uid="uid://cr2nta574g1p5" path="res://assets/sounds/robotJumpscareSFX.mp3" id="6_7kjq4"]
+[ext_resource type="AudioStream" uid="uid://dqse0lgscvcl1" path="res://assets/sounds/winSFX.mp3" id="7_p6kh1"]
 
 [node name="Autoload" type="Node" unique_id=2089026958]
 script = ExtResource("1_jc3sa")
@@ -28,3 +29,9 @@ bus = &"Echo"
 [node name="robotJumpscareSFX" type="AudioStreamPlayer2D" parent="." unique_id=61807988]
 stream = ExtResource("6_7kjq4")
 volume_db = 24.0
+
+[node name="winSFX" type="AudioStreamPlayer2D" parent="." unique_id=1916075226]
+stream = ExtResource("7_p6kh1")
+volume_db = 8.4
+pitch_scale = 0.64
+bus = &"Echo"
