@@ -1,12 +1,18 @@
 ***Game Documantation***
 
 Name: UpoFnefV2
+
 Game Genre: 2d point & click
+
 Game Engine: Godot 4
+
 Platform: PC
+
 Game Mode: Singleplayer
 
+
 Autor: Jakob Savas
+
 Start Date: 28.09.2026
 
 ***Description***
