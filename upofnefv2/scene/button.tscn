@@ -5,11 +5,11 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5a7g"]
 atlas = ExtResource("1_e4n74")
-region = Rect2(0, 0, 4, 6)
+region = Rect2(0, 0, 8, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auuqi"]
 atlas = ExtResource("1_e4n74")
-region = Rect2(4, 0, 4, 6)
+region = Rect2(8, 0, 8, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_33e6t"]
 animations = [{
@@ -35,7 +35,7 @@ script = ExtResource("1_b5a7g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1526563171]
 position = Vector2(20, 30)
-scale = Vector2(10, 10)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_33e6t")
 frame_progress = 0.913245
 

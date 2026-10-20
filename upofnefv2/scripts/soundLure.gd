@@ -17,7 +17,7 @@ func goToMouse(room):
 		global_position = get_global_mouse_position()
 		visible = true
 		soundLuring(room)
-		await get_tree().create_timer(4).timeout
+		await get_tree().create_timer(3).timeout
 		visible = false
 		soundLureOn = false
 

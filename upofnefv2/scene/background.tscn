@@ -1,7 +1,24 @@
 [gd_scene format=3 uid="uid://bnxp4tt6pw4db"]
 
-[ext_resource type="Texture2D" uid="uid://xkq7l0cr1wk5" path="res://assets/sprites/biuro.png" id="1_jirmm"]
+[ext_resource type="Texture2D" uid="uid://xkq7l0cr1wk5" path="res://assets/sprites/office.png" id="1_jirmm"]
 [ext_resource type="Script" uid="uid://du18mn67vl7e3" path="res://scripts/pc_button.gd" id="2_xpwal"]
+[ext_resource type="Texture2D" uid="uid://b6kyjps7kja38" path="res://assets/sprites/office2.png" id="3_dr1ox"]
+[ext_resource type="Script" uid="uid://bvifvc5imlhj3" path="res://scripts/background.gd" id="4_s3kv8"]
+[ext_resource type="Script" uid="uid://bymyiqc4ku5xp" path="res://scripts/lookAroundButton.gd" id="5_wua0t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejmsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jirmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dr1ox")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Background" type="Node2D" unique_id=646707378]
 
@@ -15,9 +32,17 @@ offset_bottom = 60.0
 focus_mode = 0
 script = ExtResource("2_xpwal")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1017192630]
-position = Vector2(-9.53674e-07, 0)
-scale = Vector2(10, 10)
-texture = ExtResource("1_jirmm")
+[node name="BackgroundSprite" type="AnimatedSprite2D" parent="." unique_id=1560394617]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ejmsa")
+script = ExtResource("4_s3kv8")
+
+[node name="LookAroundButton" type="Button" parent="." unique_id=1503321576]
+offset_left = -146.0
+offset_top = -103.5
+offset_right = -117.0
+offset_bottom = 103.5
+script = ExtResource("5_wua0t")
 
 [connection signal="pressed" from="PCButton" to="PCButton" method="_on_pressed"]
+[connection signal="pressed" from="LookAroundButton" to="LookAroundButton" method="_on_pressed"]

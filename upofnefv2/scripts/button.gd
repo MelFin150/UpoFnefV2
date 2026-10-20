@@ -20,14 +20,7 @@ func _process(delta): # to leci cały czas
 	else:
 		$AnimatedSprite2D.frame = 1
 	
-	if Autoload.isPCActive:
-		disabled = true
-		visible = false
-	else:
-		disabled = false
-		visible = true
-		
-	if !Autoload.gameOn:
+	if Autoload.isPCActive or !Autoload.gameOn or Autoload.background != 0:
 		disabled = true
 		visible = false
 	else:

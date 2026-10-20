@@ -8,7 +8,8 @@ var gameOn = false
 var isRobotMad = false
 var clockOn = false
 var time = 0
-var difficulty = 2 #ranges from 0 to 2
+var background = 0 # 0 = front, 1 = side wall
+var difficulty = 0 #ranges from 0 to 2
 var roomConections = {
 	1: [3],
 	2: [3],
@@ -43,11 +44,12 @@ func shutThePower(): # a tak żeby co jakiś czas korki wydupcyły
 		power_outage_sfx.play()
 		Autoload.power = false
 	Autoload.shuttingThePower = false
+	#shutThePower()
 
 func robotMovementLoop():
 	while gameOn and robotPos != 6 and time != 7:
 		if !isRobotMad:
-			await get_tree().create_timer(randi_range(3, 8 - difficulty)).timeout
+			await get_tree().create_timer(randi_range(6, 10 - difficulty)).timeout
 		else:
 			await get_tree().create_timer(1).timeout
 		robotMove()
@@ -59,7 +61,7 @@ func robotMove():
 			robot_walking_sfx.play()
 		else:
 			doJumpscare.emit()
-		print("Robot moved to:", Autoload.robotPos)
+		#print("Robot moved to:", Autoload.robotPos)
 
 func jumpscare():
 	$"/root/Game/Robot".visible = true

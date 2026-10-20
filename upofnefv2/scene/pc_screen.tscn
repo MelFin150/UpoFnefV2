@@ -104,21 +104,22 @@ z_index = 10
 script = ExtResource("1_i5tin")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729835580]
-scale = Vector2(10, 10)
+scale = Vector2(5, 5)
 texture = ExtResource("2_0hqco")
 
 [node name="PCReturnButton" type="Button" parent="." unique_id=1959472791]
+self_modulate = Color(1, 1, 1, 0)
 z_index = 1
-offset_left = -65.0
-offset_top = 95.0
-offset_right = 65.0
-offset_bottom = 135.0
+offset_left = -136.0
+offset_top = 75.0
+offset_right = -71.0
+offset_bottom = 140.0
 focus_mode = 0
 script = ExtResource("3_l3r5w")
 
 [node name="Sprite2D" type="Sprite2D" parent="PCReturnButton" unique_id=495774712]
-position = Vector2(59.999992, 20.000002)
-scale = Vector2(10, 10)
+position = Vector2(30.000004, 30)
+scale = Vector2(5, 5)
 texture = ExtResource("2_i5tin")
 
 [node name="SoundLure" type="Node2D" parent="." unique_id=582625741]
