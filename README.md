@@ -114,4 +114,9 @@ Ver. 1.0.0 - 9.10.2026
 - Added winning screen
 - Finished game
 
+Ver. 1.1.0 - 20.10.2026
+- Added second background as second wall
+- Added button for changing backgrounds
+- Changed robot moving time
+
 
