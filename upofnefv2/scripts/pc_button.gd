@@ -5,10 +5,7 @@ func _on_pressed() -> void:
 	Autoload.pc_sfx.play()
 
 func _process(delta: float) -> void:
-	if Autoload.gameOn:
-		if Autoload.isPCActive:
-			disabled = true
-		else:
-			disabled = false
-	else:
+	if !Autoload.gameOn or Autoload.isPCActive or Autoload.background == 1:
 		disabled = true
+	else:
+		disabled = false

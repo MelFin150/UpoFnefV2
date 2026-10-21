@@ -6,7 +6,6 @@ func _ready(): # to co się dzieje na początku
 	Autoload.robot_walking_sfx.bus = "Echo"
 	Autoload.win_sfx.bus = "Echo"
 	$YouWonScreen.visible = false
-	print(Autoload.gameOn)
 	
 func showWinnigScreen():
 	$YouWonScreen.self_modulate.a = 0.0

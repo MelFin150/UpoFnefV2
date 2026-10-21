@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b6kyjps7kja38" path="res://assets/sprites/office2.png" id="3_dr1ox"]
 [ext_resource type="Script" uid="uid://bvifvc5imlhj3" path="res://scripts/background.gd" id="4_s3kv8"]
 [ext_resource type="Script" uid="uid://bymyiqc4ku5xp" path="res://scripts/lookAroundButton.gd" id="5_wua0t"]
+[ext_resource type="Texture2D" uid="uid://o88ohoxtm1om" path="res://assets/sprites/lookAroundButton.png" id="6_tpy8u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ejmsa"]
 animations = [{
@@ -14,6 +15,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_dr1ox")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hehlj"]
+atlas = ExtResource("6_tpy8u")
+region = Rect2(0, 0, 10, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffjdu"]
+atlas = ExtResource("6_tpy8u")
+region = Rect2(10, 0, 10, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6cob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hehlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffjdu")
 }],
 "loop": 1,
 "name": &"default",
@@ -38,11 +61,17 @@ sprite_frames = SubResource("SpriteFrames_ejmsa")
 script = ExtResource("4_s3kv8")
 
 [node name="LookAroundButton" type="Button" parent="." unique_id=1503321576]
-offset_left = -146.0
-offset_top = -103.5
-offset_right = -117.0
-offset_bottom = 103.5
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 102.0
+offset_top = -62.0
+offset_right = 142.0
+offset_bottom = 62.0
 script = ExtResource("5_wua0t")
+
+[node name="LookAroundButtonSprite" type="AnimatedSprite2D" parent="LookAroundButton" unique_id=861678456]
+position = Vector2(20, 62)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_y6cob")
 
 [connection signal="pressed" from="PCButton" to="PCButton" method="_on_pressed"]
 [connection signal="pressed" from="LookAroundButton" to="LookAroundButton" method="_on_pressed"]

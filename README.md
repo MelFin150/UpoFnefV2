@@ -115,7 +115,16 @@ Ver. 1.0.0 - 9.10.2026
 - Finished game
 
 Ver. 1.1.0 - 20.10.2026
+- Graphics uptade
 - Added second background as second wall
 - Added button for changing backgrounds
 - Changed robot moving time
 
+Ver. 1.1.0 - 21.10.2026
+- Added sprite for look around button
+- Fixed buttons still working in menu and etc.
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad10a7a21c60ca1f4078f0529250c7a6c74dbb32
